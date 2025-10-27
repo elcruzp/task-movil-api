@@ -1,0 +1,7 @@
+com\trabajomovil\task_movil_api\category\CategoryRepository.class
+com\trabajomovil\task_movil_api\controller\CategoryController.class
+com\trabajomovil\task_movil_api\category\Category.class
+com\trabajomovil\task_movil_api\category\CategoryDTO.class
+com\trabajomovil\task_movil_api\TaskMovilApiApplication.class
+com\trabajomovil\task_movil_api\controller\HealthController.class
+com\trabajomovil\task_movil_api\task\Task.class
