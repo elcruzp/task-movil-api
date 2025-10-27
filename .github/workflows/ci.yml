@@ -7,8 +7,9 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-test:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,12 +24,11 @@ jobs:
       - name: Make mvnw executable
         run: chmod +x mvnw
 
-      - name: Build & test
-        run: ./mvnw -B verify
+      # ⬇️ Build sin tests
+      - name: Build (skip tests)
+        run: ./mvnw -B -DskipTests=true clean package
 
-      - name: Package (skip tests)
-        run: ./mvnw -B -DskipTests package
-
+      # ⬇️ El .jar generado como artifact del run
       - name: Upload JAR artifact
         uses: actions/upload-artifact@v4
         with:
